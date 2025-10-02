@@ -83,6 +83,7 @@ mkcert -install
 git clone https://github.com/rfay/d11
 cd d11
 ```
+
 ---
 
 ## Configure project, start, `ddev composer install`
@@ -97,11 +98,14 @@ ddev start
 ddev composer install
 ```
 
+---
+
 ## Launch and install project
 
 ```bash
 ddev launch
 ```
+
 ---
 
 ## Install PhpStorm, set breakpoint, and debug
@@ -124,6 +128,4 @@ Visit the site and see the breakpoint.
 - Docker installation docs: https://docs.ddev.com/en/stable/users/install/docker-installation/#docker-installation-linux
 - DDEV Installation Docs: https://docs.ddev.com/en/stable/users/install/ddev-installation/#ddev-installation-linux
 - Support: https://docs.ddev.com/en/stable/users/support/
-
----
 
