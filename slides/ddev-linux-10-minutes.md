@@ -14,6 +14,19 @@
 
 ---
 
+## What is DDEV?
+
+DDEV is a docker-based local development environment for most PHP and NodeJS projects.
+
+But you don't even have to know that docker is there.
+
+* Consistent
+* Fast startup, fast webserving
+* Team checks in configuration
+* Easy onboarding of junior devs and new team members
+
+---
+
 ## What we'll do
 
 1. Install Docker CE from official repository
