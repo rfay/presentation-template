@@ -9,7 +9,8 @@
 ## Goals
 
 **Introduce DDEV**
-**Install**: Install and Use DDEV on a real project in 10 minutes, using a fresh Ubuntu distro.
+
+**Install Everything**: Install and Use DDEV on a real project in 10 minutes, using a fresh Ubuntu distro.
 
 ---
 
