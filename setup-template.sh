@@ -43,17 +43,25 @@ TITLE=${TITLE:-"Presentation Title"}
 echo
 echo "📝 Updating files..."
 
+# Function to replace text in files (cross-platform)
+replace_in_file() {
+    local file=$1
+    local pattern=$2
+    local replacement=$3
+    sed "s|$pattern|$replacement|g" "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+}
+
 # Update README.md
-sed -i "s|YOUR-USERNAME|$OWNER|g" README.md
-sed -i "s|YOUR-REPO-NAME|$REPO|g" README.md
-sed -i "s|Presentation Title|$TITLE|g" README.md
+replace_in_file README.md "YOUR-USERNAME" "$OWNER"
+replace_in_file README.md "YOUR-REPO-NAME" "$REPO"
+replace_in_file README.md "Presentation Title" "$TITLE"
 
 # Update index.html
-sed -i "s|Presentation Title|$TITLE|g" index.html
-sed -i "s|slides/presentation.md|slides/$REPO.md|g" index.html
+replace_in_file index.html "Presentation Title" "$TITLE"
+replace_in_file index.html "slides/presentation.md" "slides/$REPO.md"
 
 # Update package.json
-sed -i "s|\"name\": \"presentation-template\"|\"name\": \"$REPO\"|g" package.json
+replace_in_file package.json "\"name\": \"presentation-template\"" "\"name\": \"$REPO\""
 
 # Rename the markdown file
 if [ -f "slides/presentation.md" ]; then
