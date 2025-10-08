@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains materials for a DDEV Claude presentation, demonstrating the integration and capabilities of Claude Code with DDEV development workflows.
+This repository is a template for creating reveal.js presentations. It provides a starting point for building presentation slides with GitHub Pages deployment.
 
 ## Development Notes
 

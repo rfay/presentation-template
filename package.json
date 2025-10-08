@@ -1,7 +1,7 @@
 {
-  "name": "ddev-dns-hosts-training",
+  "name": "presentation-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "A reveal.js presentation template",
   "main": "index.js",
   "scripts": {
     "start": "npx live-server --port=8000 --open=/",
