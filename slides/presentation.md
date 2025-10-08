@@ -1,6 +1,7 @@
 # **Your Presentation Title**
+### with
 
-A presentation built with reveal.js
+<img src="images/ddev-logo.svg" alt="DDEV Logo" class="ddev-logo">
 
 ---
 
