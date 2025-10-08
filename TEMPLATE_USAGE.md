@@ -37,10 +37,23 @@ This guide explains how to use this presentation template to create your own rev
    Opens at http://localhost:8000
 
 7. **Deploy to GitHub Pages**:
-   - Go to Settings > Pages in your repository
-   - Set Source to "Deploy from a branch"
-   - Select `main` branch
-   - Click Save
+   
+   **Step 1: Enable GitHub Actions Workflow Permissions**
+   - Go to **Settings** > **Actions** > **General**
+   - Scroll to **Workflow permissions**
+   - Select **Read and write permissions**
+   - Check **Allow GitHub Actions to create and approve pull requests**
+   - Click **Save**
+   
+   **Step 2: Enable GitHub Pages**
+   - Go to **Settings** > **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Click **Save**
+   
+   **Step 3: Push and Deploy**
+   - Push your changes to `main` branch
+   - GitHub Actions will automatically build and deploy
+   - Monitor progress in the **Actions** tab
    - Your presentation will be live at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
 
 ## What Gets Customized
@@ -151,16 +164,57 @@ See [reveal.js documentation](https://revealjs.com/config/) for all options.
 
 ## GitHub Pages Deployment
 
-The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that:
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys your presentation.
 
-1. Triggers on pushes to `main`
-2. Builds the presentation
-3. Deploys to GitHub Pages
+### Initial Setup
 
-You just need to:
-1. Enable GitHub Pages in Settings
-2. Push to `main` branch
-3. Wait for the action to complete
+**Step 1: Enable GitHub Actions Workflow Permissions**
+
+1. Go to **Settings** > **Actions** > **General**
+2. Scroll down to **Workflow permissions**
+3. Select **Read and write permissions**
+4. Check **Allow GitHub Actions to create and approve pull requests**
+5. Click **Save**
+
+Without these permissions, the workflow cannot deploy to GitHub Pages.
+
+**Step 2: Enable GitHub Pages**
+
+1. Go to **Settings** > **Pages**
+2. Under **Build and deployment** > **Source**
+3. Select **GitHub Actions** from the dropdown
+4. Click **Save**
+
+**Step 3: Deploy**
+
+1. Push your changes to the `main` branch
+2. The workflow will automatically trigger
+3. Monitor progress in the **Actions** tab
+4. Once complete (usually 1-2 minutes), your presentation is live
+
+### How It Works
+
+The workflow:
+1. Triggers on every push to `main` branch
+2. Builds the presentation by copying necessary files
+3. Creates a deployment artifact
+4. Deploys to GitHub Pages
+5. Your site is available at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
+
+### Troubleshooting Deployment
+
+**Workflow fails with "Resource not accessible by integration"**
+- Check that workflow permissions are set to "Read and write permissions" in Settings > Actions > General
+
+**Pages not deploying**
+- Verify GitHub Pages source is set to "GitHub Actions"
+- Check the Actions tab for error messages
+- Ensure you've pushed to the `main` branch
+
+**404 error when visiting the URL**
+- Wait a few minutes after the first deployment
+- Check Settings > Pages to confirm the deployment URL
+- Verify the workflow completed successfully in Actions tab
 
 ## Troubleshooting
 

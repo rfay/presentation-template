@@ -56,11 +56,33 @@ This will start a local server at http://localhost:8000
 
 ## 🌐 Deploy to GitHub Pages
 
-1. Go to your repository Settings > Pages
-2. Set Source to "Deploy from a branch"
-3. Select the `main` branch
-4. Click Save
-5. Your presentation will be available at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
+### Step 1: Enable GitHub Actions Workflow Permissions
+
+1. Go to your repository **Settings** > **Actions** > **General**
+2. Scroll down to **Workflow permissions**
+3. Select **Read and write permissions**
+4. Check **Allow GitHub Actions to create and approve pull requests**
+5. Click **Save**
+
+### Step 2: Enable GitHub Pages
+
+1. Go to your repository **Settings** > **Pages**
+2. Under **Source**, select **GitHub Actions** from the dropdown
+3. Click **Save**
+
+### Step 3: Deploy
+
+1. Push your changes to the `main` branch:
+   ```bash
+   git add .
+   git commit -m "Initial presentation"
+   git push
+   ```
+2. The GitHub Actions workflow will automatically build and deploy your presentation
+3. Check the **Actions** tab to monitor the deployment
+4. Once complete, your presentation will be available at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
+
+**Note:** The first deployment may take a few minutes. Subsequent updates deploy automatically when you push to `main`.
 
 ## 🎨 Customization
 
