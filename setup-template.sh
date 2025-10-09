@@ -36,8 +36,8 @@ if [ "$CONFIRM" != "y" ]; then
     read -p "Enter repository name: " REPO
 fi
 
-read -p "Enter presentation title [Presentation Title]: " TITLE
-TITLE=${TITLE:-"Presentation Title"}
+read -p "Enter presentation title [$REPO]: " TITLE
+TITLE=${TITLE:-"$REPO"}
 
 # Replace placeholders in files
 echo
