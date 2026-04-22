@@ -1,7 +1,6 @@
 # **Your Presentation Title**
-### with
 
-<img src="images/ddev-logo.svg" alt="DDEV Logo" class="ddev-logo">
+![DDEV Logo](images/ddev-logo.svg)
 
 ---
 
@@ -34,7 +33,6 @@ echo "Hello, world!"
 
 Edit this file (`slides/presentation.md`) to create your presentation!
 
-- Use `---` to create new slides
-- Use `--` for vertical slides
-- Add images from the `images/` directory
-- See [reveal.js documentation](https://revealjs.com/) for more features
+* Use `---` to create new slides
+* Add images from the `images/` directory
+* See [reveal.js documentation](https://revealjs.com/) for more features
