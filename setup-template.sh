@@ -77,6 +77,31 @@ if [ -f "slides/$REPO.md" ]; then
     replace_in_file "slides/$REPO.md" "Your Presentation Title" "$TITLE"
 fi
 
+# Configure repository settings via gh CLI if available
+SETTINGS_INSTRUCTIONS="   Set these manually in Settings > General:
+   • Merge button: enable squash merging only (disable merge commits and rebase)
+   • Automatically delete head branches: enable"
+
+if ! command -v gh &>/dev/null; then
+    echo "ℹ️  gh CLI not found — $SETTINGS_INSTRUCTIONS"
+elif ! gh auth status &>/dev/null 2>&1; then
+    echo "ℹ️  gh CLI not authenticated — $SETTINGS_INSTRUCTIONS"
+else
+    echo "⚙️  Configuring repository settings..."
+    if gh api "repos/$OWNER/$REPO" \
+        --method PATCH \
+        -f delete_branch_on_merge=true \
+        -f allow_squash_merge=true \
+        -f allow_merge_commit=false \
+        -f allow_rebase_merge=false \
+        --silent 2>&1; then
+        echo "✅ Repository settings configured (squash-only, auto-delete branches)"
+    else
+        echo "⚠️  Could not configure repository settings (insufficient permissions?) —"
+        echo "$SETTINGS_INSTRUCTIONS"
+    fi
+fi
+
 # Self-destruct: remove this setup script
 echo
 echo "🎉 Setup complete!"
