@@ -4,12 +4,15 @@
   "description": "A reveal.js presentation template",
   "main": "index.js",
   "scripts": {
-    "start": "npx live-server --port=8000 --open=/",
+    "start": "live-server --port=8000 --open=/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
 }

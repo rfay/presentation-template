@@ -14,11 +14,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repository is a template for creating reveal.js presentations. It provides a starting point for building presentation slides with GitHub Pages deployment.
 
+## Template Customization Checklist
+
+When creating a new presentation from this template, update:
+
+- `index.html`: Change the `<title>` tag and the `data-markdown` slide filename
+- `slides/`: Rename and edit the markdown slide file to match your presentation
+- `README.md`: Update the title, description, and live presentation URL
+- `package.json`: Update the `name` field
+- `css/custom.css`: Adjust branding colors and styles as needed
+
 ## Development Notes
 
 ### Branch Naming
 
 Use descriptive branch names that include:
+
 - Date in YYYYMMDD format
 - Your GitHub username  
 - Brief description of the work
