@@ -72,6 +72,11 @@ elif [ -f "slides/ddev-linux-10-minutes.md" ]; then
     echo "✅ Renamed slides/ddev-linux-10-minutes.md to slides/$REPO.md"
 fi
 
+# Update title inside the markdown file
+if [ -f "slides/$REPO.md" ]; then
+    replace_in_file "slides/$REPO.md" "Your Presentation Title" "$TITLE"
+fi
+
 # Self-destruct: remove this setup script
 echo
 echo "🎉 Setup complete!"
