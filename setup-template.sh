@@ -111,7 +111,7 @@ echo "  1. Edit slides/$REPO.md with your presentation content"
 echo "  2. Customize css/custom.css if needed"
 echo "  3. Add images to the images/ directory"
 echo "  4. Commit and push your changes"
-echo "  5. Enable GitHub Pages in repository settings (Settings > Pages > Deploy from main branch)"
+echo "  5. Enable GitHub Pages in repository settings (Settings > Pages > Source: GitHub Actions)"
 echo
 read -p "Remove this setup script? (y/n) [y]: " REMOVE
 REMOVE=${REMOVE:-y}

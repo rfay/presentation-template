@@ -40,7 +40,6 @@ After setup, this link will automatically point to your GitHub Pages deployment.
 The presentation is written in Markdown. Edit the file in the `slides/` directory.
 
 - Use `---` to separate slides
-- Use `--` for vertical slides
 - Add images to the `images/` directory
 - Customize styling in `css/custom.css`
 
@@ -56,21 +55,13 @@ This will start a local server at http://localhost:8000
 
 ## 🌐 Deploy to GitHub Pages
 
-### Step 1: Enable GitHub Actions Workflow Permissions
-
-1. Go to your repository **Settings** > **Actions** > **General**
-2. Scroll down to **Workflow permissions**
-3. Select **Read and write permissions**
-4. Check **Allow GitHub Actions to create and approve pull requests**
-5. Click **Save**
-
-### Step 2: Enable GitHub Pages
+### Step 1: Enable GitHub Pages
 
 1. Go to your repository **Settings** > **Pages**
 2. Under **Source**, select **GitHub Actions** from the dropdown
 3. Click **Save**
 
-### Step 3: Deploy
+### Step 2: Deploy
 
 1. Push your changes to the `main` branch:
    ```bash

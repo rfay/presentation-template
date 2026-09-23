@@ -38,19 +38,12 @@ This guide explains how to use this presentation template to create your own rev
 
 7. **Deploy to GitHub Pages**:
    
-   **Step 1: Enable GitHub Actions Workflow Permissions**
-   - Go to **Settings** > **Actions** > **General**
-   - Scroll to **Workflow permissions**
-   - Select **Read and write permissions**
-   - Check **Allow GitHub Actions to create and approve pull requests**
-   - Click **Save**
-   
-   **Step 2: Enable GitHub Pages**
+   **Step 1: Enable GitHub Pages**
    - Go to **Settings** > **Pages**
    - Under **Source**, select **GitHub Actions**
    - Click **Save**
    
-   **Step 3: Push and Deploy**
+   **Step 2: Push and Deploy**
    - Push your changes to `main` branch
    - GitHub Actions will automatically build and deploy
    - Monitor progress in the **Actions** tab
@@ -117,7 +110,6 @@ echo "Hello"
 ### Slide Separators
 
 - `---` creates a new horizontal slide
-- `--` creates a vertical slide (nested under current)
 - `Note:` at the start of a line creates speaker notes
 
 ### Adding Images
@@ -168,24 +160,14 @@ The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml
 
 ### Initial Setup
 
-**Step 1: Enable GitHub Actions Workflow Permissions**
-
-1. Go to **Settings** > **Actions** > **General**
-2. Scroll down to **Workflow permissions**
-3. Select **Read and write permissions**
-4. Check **Allow GitHub Actions to create and approve pull requests**
-5. Click **Save**
-
-Without these permissions, the workflow cannot deploy to GitHub Pages.
-
-**Step 2: Enable GitHub Pages**
+**Step 1: Enable GitHub Pages**
 
 1. Go to **Settings** > **Pages**
 2. Under **Build and deployment** > **Source**
 3. Select **GitHub Actions** from the dropdown
 4. Click **Save**
 
-**Step 3: Deploy**
+**Step 2: Deploy**
 
 1. Push your changes to the `main` branch
 2. The workflow will automatically trigger
@@ -202,9 +184,6 @@ The workflow:
 5. Your site is available at `https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/`
 
 ### Troubleshooting Deployment
-
-**Workflow fails with "Resource not accessible by integration"**
-- Check that workflow permissions are set to "Read and write permissions" in Settings > Actions > General
 
 **Pages not deploying**
 - Verify GitHub Pages source is set to "GitHub Actions"
